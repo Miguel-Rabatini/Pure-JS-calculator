@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+}
+
+
+
+
+
+/* Variables
+------------ */
+:root {
+    --lgt-dp0: white;
+    --lgt-dp1: #f5f5f5;
+    --lgt-dp2: #EEEEEE;
+    --lgt-bx-sdw: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+    --drk-dp0: #222222;
+    --drk-dp1: #1e1e1e;
+    --drk-dp2: #121212;
+    --drk-bx-sdw: 0 -2px 10px rgba(0, 0, 0, 1);
+}
+
+
+
+
+
+/* Body related settings
+------------------------ */
+
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.body--light {
+    background-color: var(--lgt-dp0);
+}
+
+
+
+
+
+/* Calculator main container related settings 
+--------------------------------------------- */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+    width: 25vw;
+}
+
+.main-container--light {
+    background-color: var(--lgt-dp2);
+}
+
+
+
+
+
+/* Main container display area related settings
+----------------------------------------------- */
+
+.main-container__display-area {
+    height: 10%;
+    width: 90%;
+    padding: 5px;
+}
+
+.main-container__display-area--light {
+    background-color: var(--lgt-dp1);
+}
+
+
+
+
+
+/* Display area display related settings
+---------------------------------------- */
+
+.display-area__display {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-size: 35px;
+}
+
+.display-area__display--light {
+    background-color: var(--lgt-dp0);
+}
+
+
+
+
+
+/* Main container input container related settings
+-------------------------------------------------- */
+
+.main-container__input-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+    "cln cln divi mult"
+    "input7 input8 input9 subt"
+    "input4 input5 input6 addi"
+    "input1 input2 input3 clt"
+    "input0 input0 dcm clt"
+    ;
+    gap: 5px;
+    height: 80%;
+    width: 90%;
+    padding: 5px;
+}
+
+.main-container__input-container {
+    background-color: var(--lgt-dp1);
+}
+
+
+
+
+
+/* Input container input related settings
+----------------------------------------- */
+
+.input-container__input {
+    font-size: 28px;
+}
+
+.input-container__input:active {
+    height: 95%;
+    width: 95%;
+}
+
+.input-container__operator-input {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.input-container__operator-input:hover {
+    background-color: blue;
+}
+
+.input-container__operator-input--bg-clr-red {
+    background-color: red;
+}
+
+.input-container__operator-input--bg-clr-red:hover {
+    background-color: rgb(201, 7, 7);
+}
+
+.input-container__number-input--light {
+    background-color: white;
+    color: black;
+}
+
+.input-container__number-input--light:hover {
+    background-color: lightgrey;
+}
+
+.input-container__cln-input {
+    grid-area: cln;
+}
+
+.input-container__divi-input {
+    grid-area: divi;
+}
+
+.input-container__mult-input {
+    grid-area: mult;
+}
+
+.input-container__7-input {
+    grid-area: input7;
+}
+
+.input-container__8-input {
+    grid-area: input8;
+}
+
+.input-container__9-input {
+    grid-area: input9;
+}
+
+.input-container__subt-input {
+    grid-area: subt;
+}
+
+.input-container__4-input {
+    grid-area: input4;
+}
+
+.input-container__5-input {
+    grid-area: input5;
+}
+
+.input-container__6-input {
+    grid-area: input6;
+}
+
+.input-container__addi-input {
+    grid-area: addi;
+}
+
+.input-container__1-input {
+    grid-area: input1;
+}
+
+.input-container__2-input {
+    grid-area: input2;
+}
+
+.input-container__3-input {
+    grid-area: input3;
+}
+
+.input-container__clt-input {
+    grid-area: clt;
+}
+
+.input-container__0-input {
+    grid-area: input0;
+}
+
+.input-container__dcm-input {
+    grid-area: dcm;
+}
+
+/* Check box area check box label related settings
+-------------------------------------------------- */
+
+.check-box-area__check-box-label--light {
+    color: black;
+}

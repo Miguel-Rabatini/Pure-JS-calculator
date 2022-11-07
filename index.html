@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+
+<body class="body   body--light">
+
+    <main class="main-container    main-container--light">
+
+        <div class="main-container__display-area    main-container__display-area--light">
+
+            <span class="display-area__display    display-area__display--light">iajdsajsdjiajs</span>
+        </div>
+
+        <div class="main-container__input-container    main-container__input-container--light">
+
+            <input type="button" value="AC"
+                class="input-container__input input-container__operator-input input-container__cln-input input-container__operator-input--bg-clr-red">
+            <input type="button" value="/"
+                class="input-container__input input-container__operator-input input-container__divi-input">
+            <input type="button" value="X"
+                class="input-container__input input-container__operator-input input-container__mult-input">
+            <input type="button" value="7"
+                class="input-container__input input-container__number-input input-container__7-input input-container__number-input--light">
+            <input type="button" value="8"
+                class="input-container__input input-container__number-input input-container__8-input input-container__number-input--light">
+            <input type="button" value="9"
+                class="input-container__input input-container__number-input input-container__9-input input-container__number-input--light ">
+            <input type="button" value="-"
+                class="input-container__input input-container__operator-input input-container__subt-input">
+            <input type="button" value="4"
+                class="input-container__input input-container__number-input input-container__4-input input-container__number-input--light">
+            <input type="button" value="5"
+                class="input-container__input input-container__number-input input-container__5-input input-container__number-input--light">
+            <input type="button" value="6"
+                class="input-container__input input-container__number-input input-container__6-input input-container__number-input--light">
+            <input type="button" value="+"
+                class="input-container__input input-container__operator-input input-container__addi-input">
+            <input type="button" value="1"
+                class="input-container__input input-container__number-input input-container__1-input input-container__number-input--light">
+            <input type="button" value="2"
+                class="input-container__input input-container__number-input input-container__2-input input-container__number-input--light">
+            <input type="button" value="3"
+                class="input-container__input input-container__number-input input-container__3-input input-container__number-input--light">
+            <input type="button" value="="
+                class="input-container__input input-container__operator-input input-container__clt-input input-container__operator-input--bg-clr-red">
+            <input type="button" value="0"
+                class="input-container__input input-container__number-input input-container__0-input input-container__number-input--light">
+            <input type="button" value="."
+                class="input-container__input input-container__operator-input input-container__dcm-input">
+        </div>
+    </main>
+
+    <div class="main_container__check-box-area">
+
+        <input type="checkbox" id="dark-check" class="check-box-area__checkbox">
+        <label for="dark-check" class="check-box-area__check-box-label check-box-area__check-box-label--light">
+            Dark mode</label>
+    </div>
+
+
+    <script>
+        let teste = document.getElementsByClassName("display-area__display").innerText
+        
+        alert(teste)
+    </script>
+</body>
+
+</html>
