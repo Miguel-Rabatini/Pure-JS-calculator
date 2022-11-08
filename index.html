@@ -9,51 +9,68 @@
     <title>Calculator</title>
 </head>
 
-<body class="body   body--light">
+<body class="body   body--lgt">
 
-    <main class="main-container    main-container--light">
+    <main class="main-container    main-container--lgt">
 
-        <div class="main-container__display-area    main-container__display-area--light">
+        <div class="main-container__display-area    main-container__display-area--lgt">
 
-            <span class="display-area__display    display-area__display--light">iajdsajsdjiajs</span>
+            <span class="display-area__display    display-area__display--lgt"></span>
         </div>
 
-        <div class="main-container__input-container    main-container__input-container--light">
+        <div class="main-container__input-container    main-container__input-container--lgt">
 
             <input type="button" value="AC"
-                class="input-container__input input-container__operator-input input-container__cln-input input-container__operator-input--bg-clr-red">
+                class="input-container__input    input-container__op-input    input-container__cln-input    input-container__op-input--bg-clr-red"
+                onclick="displayClean()">
             <input type="button" value="/"
-                class="input-container__input input-container__operator-input input-container__divi-input">
+                class="input-container__input    input-container__op-input    input-container__divi-input"
+                onclick="displayWrite('/')">
             <input type="button" value="X"
-                class="input-container__input input-container__operator-input input-container__mult-input">
+                class="input-container__input    input-container__op-input    input-container__mult-input"
+                onclick="displayWrite('*')">
             <input type="button" value="7"
-                class="input-container__input input-container__number-input input-container__7-input input-container__number-input--light">
+                class="input-container__input    input-container__num-input    input-container__7-input    input-container__num-input--lgt"
+                onclick="displayWrite('7')">
             <input type="button" value="8"
-                class="input-container__input input-container__number-input input-container__8-input input-container__number-input--light">
+                class="input-container__input    input-container__num-input    input-container__8-input    input-container__num-input--lgt"
+                onclick="displayWrite('8')">
             <input type="button" value="9"
-                class="input-container__input input-container__number-input input-container__9-input input-container__number-input--light ">
+                class="input-container__input    input-container__num-input    input-container__9-input    input-container__num-input--lgt "
+                onclick="displayWrite('9')">
             <input type="button" value="-"
-                class="input-container__input input-container__operator-input input-container__subt-input">
+                class="input-container__input    input-container__op-input    input-container__subt-input"
+                onclick="displayWrite('-')">
             <input type="button" value="4"
-                class="input-container__input input-container__number-input input-container__4-input input-container__number-input--light">
+                class="input-container__input    input-container__num-input    input-container__4-input    input-container__num-input--lgt"
+                onclick="displayWrite('4')">
             <input type="button" value="5"
-                class="input-container__input input-container__number-input input-container__5-input input-container__number-input--light">
+                class="input-container__input    input-container__num-input    input-container__5-input    input-container__num-input--lgt"
+                onclick="displayWrite('5')">
             <input type="button" value="6"
-                class="input-container__input input-container__number-input input-container__6-input input-container__number-input--light">
+                class="input-container__input    input-container__num-input    input-container__6-input    input-container__num-input--lgt"
+                onclick="displayWrite('6')">
             <input type="button" value="+"
-                class="input-container__input input-container__operator-input input-container__addi-input">
+                class="input-container__input    input-container__op-input    input-container__addi-input"
+                onclick="displayWrite('+')">
             <input type="button" value="1"
-                class="input-container__input input-container__number-input input-container__1-input input-container__number-input--light">
+                class="input-container__input    input-container__num-input    input-container__1-input    input-container__num-input--lgt"
+                onclick="displayWrite('1')">
             <input type="button" value="2"
-                class="input-container__input input-container__number-input input-container__2-input input-container__number-input--light">
+                class="input-container__input    input-container__num-input    input-container__2-input    input-container__num-input--lgt"
+                onclick="displayWrite('2')">
             <input type="button" value="3"
-                class="input-container__input input-container__number-input input-container__3-input input-container__number-input--light">
+                class="input-container__input    input-container__num-input    input-container__3-input    input-container__num-input--lgt"
+                onclick="displayWrite('3')">
             <input type="button" value="="
-                class="input-container__input input-container__operator-input input-container__clt-input input-container__operator-input--bg-clr-red">
+                class="input-container__input    input-container__op-input    input-container__clt-input    input-container__op-input--bg-clr-red"
+                onclick="calculate()">
             <input type="button" value="0"
-                class="input-container__input input-container__number-input input-container__0-input input-container__number-input--light">
+                class="input-container__input    input-container__num-input    input-container__0-input    input-container__num-input--lgt"
+                onclick="displayWrite('0')">
             <input type="button" value="."
-                class="input-container__input input-container__operator-input input-container__dcm-input">
+                class="input-container__input    input-container__op-input    input-container__dcm-input"
+                onclick="displayWrite('.')">
         </div>
     </main>
 
@@ -64,11 +81,26 @@
             Dark mode</label>
     </div>
 
-
     <script>
-        let teste = document.getElementsByClassName("display-area__display").innerText
-        
-        alert(teste)
+
+        const display = document.querySelector('.display-area__display')
+
+        function displayWrite(value) {
+
+            display.innerHTML += value
+        }
+
+        function displayClean() {
+
+            display.innerHTML = ''
+        }
+
+        function calculate() {
+
+            let result = eval(display.innerHTML)
+
+            display.innerHTML = result;
+        }
     </script>
 </body>
 

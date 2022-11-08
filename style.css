@@ -38,7 +38,7 @@
     height: 100vh;
 }
 
-.body--light {
+.body--lgt {
     background-color: var(--lgt-dp0);
 }
 
@@ -58,7 +58,7 @@
     width: 25vw;
 }
 
-.main-container--light {
+.main-container--lgt {
     background-color: var(--lgt-dp2);
 }
 
@@ -75,7 +75,7 @@
     padding: 5px;
 }
 
-.main-container__display-area--light {
+.main-container__display-area--lgt {
     background-color: var(--lgt-dp1);
 }
 
@@ -90,13 +90,15 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: right;
     height: 100%;
     width: 100%;
     overflow: hidden;
     font-size: 35px;
+    white-space: nowrap;
 }
 
-.display-area__display--light {
+.display-area__display--lgt {
     background-color: var(--lgt-dp0);
 }
 
@@ -144,29 +146,29 @@
     width: 95%;
 }
 
-.input-container__operator-input {
+.input-container__op-input {
     background-color: dodgerblue;
     color: white;
 }
 
-.input-container__operator-input:hover {
+.input-container__op-input:hover {
     background-color: blue;
 }
 
-.input-container__operator-input--bg-clr-red {
+.input-container__op-input--bg-clr-red {
     background-color: red;
 }
 
-.input-container__operator-input--bg-clr-red:hover {
+.input-container__op-input--bg-clr-red:hover {
     background-color: rgb(201, 7, 7);
 }
 
-.input-container__number-input--light {
+.input-container__num-input--lgt {
     background-color: white;
     color: black;
 }
 
-.input-container__number-input--light:hover {
+.input-container__num-input--lgt:hover {
     background-color: lightgrey;
 }
 
@@ -241,6 +243,6 @@
 /* Check box area check box label related settings
 -------------------------------------------------- */
 
-.check-box-area__check-box-label--light {
+.check-box-area__check-box-label--lgt {
     color: black;
 }
