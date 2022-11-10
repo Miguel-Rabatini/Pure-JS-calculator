@@ -1,107 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Calculator</title>
-</head>
+  </head>
 
-<body class="body   body--lgt">
+  <body class="body body--lgt">
+    <main class="main-container main-container--lgt">
+      <div
+        class="main-container__display-area main-container__display-area--lgt"
+      >
+        <span class="display-area__display display-area__display--lgt"></span>
+      </div>
 
-    <main class="main-container    main-container--lgt">
-
-        <div class="main-container__display-area    main-container__display-area--lgt">
-
-            <span class="display-area__display    display-area__display--lgt"></span>
-        </div>
-
-        <div class="main-container__input-container    main-container__input-container--lgt">
-
-            <input type="button" value="AC"
-                class="input-container__input    input-container__op-input    input-container__cln-input    input-container__op-input--bg-clr-red"
-                onclick="displayClean()">
-            <input type="button" value="/"
-                class="input-container__input    input-container__op-input    input-container__divi-input"
-                onclick="displayWrite('/')">
-            <input type="button" value="X"
-                class="input-container__input    input-container__op-input    input-container__mult-input"
-                onclick="displayWrite('*')">
-            <input type="button" value="7"
-                class="input-container__input    input-container__num-input    input-container__7-input    input-container__num-input--lgt"
-                onclick="displayWrite('7')">
-            <input type="button" value="8"
-                class="input-container__input    input-container__num-input    input-container__8-input    input-container__num-input--lgt"
-                onclick="displayWrite('8')">
-            <input type="button" value="9"
-                class="input-container__input    input-container__num-input    input-container__9-input    input-container__num-input--lgt "
-                onclick="displayWrite('9')">
-            <input type="button" value="-"
-                class="input-container__input    input-container__op-input    input-container__subt-input"
-                onclick="displayWrite('-')">
-            <input type="button" value="4"
-                class="input-container__input    input-container__num-input    input-container__4-input    input-container__num-input--lgt"
-                onclick="displayWrite('4')">
-            <input type="button" value="5"
-                class="input-container__input    input-container__num-input    input-container__5-input    input-container__num-input--lgt"
-                onclick="displayWrite('5')">
-            <input type="button" value="6"
-                class="input-container__input    input-container__num-input    input-container__6-input    input-container__num-input--lgt"
-                onclick="displayWrite('6')">
-            <input type="button" value="+"
-                class="input-container__input    input-container__op-input    input-container__addi-input"
-                onclick="displayWrite('+')">
-            <input type="button" value="1"
-                class="input-container__input    input-container__num-input    input-container__1-input    input-container__num-input--lgt"
-                onclick="displayWrite('1')">
-            <input type="button" value="2"
-                class="input-container__input    input-container__num-input    input-container__2-input    input-container__num-input--lgt"
-                onclick="displayWrite('2')">
-            <input type="button" value="3"
-                class="input-container__input    input-container__num-input    input-container__3-input    input-container__num-input--lgt"
-                onclick="displayWrite('3')">
-            <input type="button" value="="
-                class="input-container__input    input-container__op-input    input-container__clt-input    input-container__op-input--bg-clr-red"
-                onclick="calculate()">
-            <input type="button" value="0"
-                class="input-container__input    input-container__num-input    input-container__0-input    input-container__num-input--lgt"
-                onclick="displayWrite('0')">
-            <input type="button" value="."
-                class="input-container__input    input-container__op-input    input-container__dcm-input"
-                onclick="displayWrite('.')">
-        </div>
+      <div
+        class="main-container__input-container main-container__input-container--lgt"
+      >
+        <input
+          type="button"
+          value="AC"
+          class="input-container__input input-container__op-input input-container__cln-input input-container__op-input--bg-clr-red"
+          onclick="displayClean()"
+        />
+        <input
+          type="button"
+          value="&divide;"
+          class="input-container__input input-container__op-input input-container__divi-input"
+          onclick="displayWrite('&divide;')"
+        />
+        <input
+          type="button"
+          value="&times;"
+          class="input-container__input input-container__op-input input-container__mult-input"
+          onclick="displayWrite('&times;')"
+        />
+        <input
+          type="button"
+          value="7"
+          class="input-container__input input-container__num-input input-container__7-input input-container__num-input--lgt"
+          onclick="displayWrite('7')"
+        />
+        <input
+          type="button"
+          value="8"
+          class="input-container__input input-container__num-input input-container__8-input input-container__num-input--lgt"
+          onclick="displayWrite('8')"
+        />
+        <input
+          type="button"
+          value="9"
+          class="input-container__input input-container__num-input input-container__9-input input-container__num-input--lgt"
+          onclick="displayWrite('9')"
+        />
+        <input
+          type="button"
+          value="&minus;"
+          class="input-container__input input-container__op-input input-container__subt-input"
+          onclick="displayWrite('&minus;')"
+        />
+        <input
+          type="button"
+          value="4"
+          class="input-container__input input-container__num-input input-container__4-input input-container__num-input--lgt"
+          onclick="displayWrite('4')"
+        />
+        <input
+          type="button"
+          value="5"
+          class="input-container__input input-container__num-input input-container__5-input input-container__num-input--lgt"
+          onclick="displayWrite('5')"
+        />
+        <input
+          type="button"
+          value="6"
+          class="input-container__input input-container__num-input input-container__6-input input-container__num-input--lgt"
+          onclick="displayWrite('6')"
+        />
+        <input
+          type="button"
+          value="&plus;"
+          class="input-container__input input-container__op-input input-container__addi-input"
+          onclick="displayWrite('&plus;')"
+        />
+        <input
+          type="button"
+          value="1"
+          class="input-container__input input-container__num-input input-container__1-input input-container__num-input--lgt"
+          onclick="displayWrite('1')"
+        />
+        <input
+          type="button"
+          value="2"
+          class="input-container__input input-container__num-input input-container__2-input input-container__num-input--lgt"
+          onclick="displayWrite('2')"
+        />
+        <input
+          type="button"
+          value="3"
+          class="input-container__input input-container__num-input input-container__3-input input-container__num-input--lgt"
+          onclick="displayWrite('3')"
+        />
+        <input
+          type="button"
+          value="&equals;"
+          class="input-container__input input-container__op-input input-container__clt-input input-container__op-input--bg-clr-red"
+          onclick="calculate()"
+        />
+        <input
+          type="button"
+          value="0"
+          class="input-container__input input-container__num-input input-container__0-input input-container__num-input--lgt"
+          onclick="displayWrite('0')"
+        />
+        <input
+          type="button"
+          value="."
+          class="input-container__input input-container__op-input input-container__dcm-input"
+          onclick="displayWrite('.')"
+        />
+      </div>
     </main>
 
     <div class="main_container__check-box-area">
-
-        <input type="checkbox" id="dark-check" class="check-box-area__checkbox">
-        <label for="dark-check" class="check-box-area__check-box-label check-box-area__check-box-label--light">
-            Dark mode</label>
+      <input type="checkbox" id="dark-check" class="check-box-area__checkbox" />
+      <label
+        for="dark-check"
+        class="check-box-area__check-box-label check-box-area__check-box-label--light"
+      >
+        Dark mode</label
+      >
     </div>
 
     <script>
+      const display = document.querySelector(".display-area__display");
+      let getDisplayValue = "";
 
-        const display = document.querySelector('.display-area__display')
+      function displayWrite(value) {
+        display.innerHTML += value;
 
-        function displayWrite(value) {
+        getDisplayValue = display.innerHTML;
+        getDisplayValue = getDisplayValue.replaceAll("×", "*");
+        getDisplayValue = getDisplayValue.replaceAll("÷", "/");
+        getDisplayValue = getDisplayValue.replaceAll("−", "-");
+        getDisplayValue = getDisplayValue.replaceAll("+", "+");
+      }
 
-            display.innerHTML += value
-        }
+      function displayClean() {
+        display.innerHTML = "";
+      }
 
-        function displayClean() {
+      function calculate() {
+        let result = eval(getDisplayValue);
 
-            display.innerHTML = ''
-        }
-
-        function calculate() {
-
-            let result = eval(display.innerHTML)
-
-            display.innerHTML = result;
-        }
+        display.innerHTML = result;
+      }
     </script>
-</body>
-
+  </body>
 </html>
