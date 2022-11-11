@@ -28,14 +28,7 @@
   justify-content: space-around;
   align-items: center;
   height: 100vh;
-}
-
-.body--lgt {
   background-color: var(--lgt-dp0);
-}
-
-.body--drk {
-  background-color: var(--drk-dp0);
 }
 
 /* Calculator main container related settings 
@@ -48,14 +41,7 @@
   align-items: center;
   height: 80vh;
   width: 25vw;
-}
-
-.main-container--lgt {
   background-color: var(--lgt-dp2);
-}
-
-.main-container--drk {
-  background-color: var(--drk-dp2);
 }
 
 /* Main container display area related settings
@@ -65,14 +51,7 @@
   height: 10%;
   width: 90%;
   padding: 5px;
-}
-
-.main-container__display-area--lgt {
   background-color: var(--lgt-dp1);
-}
-
-.main-container__display-area--drk {
-  background-color: var(--drk-dp1);
 }
 
 /* Display area display related settings
@@ -88,16 +67,8 @@
   overflow: hidden;
   font-size: 35px;
   white-space: nowrap;
-}
-
-.display-area__display--lgt {
   background-color: var(--lgt-dp0);
   color: black;
-}
-
-.display-area__display--drk {
-  background-color: var(--drk-dp0);
-  color: white;
 }
 
 /* Main container input container related settings
@@ -117,14 +88,7 @@
   height: 80%;
   width: 90%;
   padding: 5px;
-}
-
-.main-container__input-container--lgt {
   background-color: var(--lgt-dp1);
-}
-
-.main-container__input-container--drk {
-  background-color: var(--drk-dp1);
 }
 
 /* Input container input related settings
@@ -162,22 +126,13 @@
 /* Input container number inputs related settings 
 -------------------------------------------------*/
 
-.input-container__num-input--lgt {
+.input-container__num-input {
   background-color: var(--lgt-dp0);
   color: black;
 }
 
-.input-container__num-input--lgt:hover {
+.input-container__num-input:hover {
   background-color: lightgrey;
-}
-
-.input-container__num-input--drk {
-  background-color: var(--drk-dp0);
-  color: white;
-}
-
-.input-container__num-input--drk:hover {
-  background-color: rgb(26, 25, 25);
 }
 
 /* Input container inputs grid area settings
@@ -249,15 +204,4 @@
 
 .input-container__dcm-input {
   grid-area: dcm;
-}
-
-/* Check box area check box label related settings
--------------------------------------------------- */
-
-.check-box-area__check-box-label--lgt {
-  color: black;
-}
-
-.check-box-area__check-box-label--drk {
-  color: white;
 }
