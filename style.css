@@ -1,248 +1,263 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
 }
-
-
-
-
 
 /* Variables
 ------------ */
 :root {
-    --lgt-dp0: white;
-    --lgt-dp1: #f5f5f5;
-    --lgt-dp2: #EEEEEE;
-    --lgt-bx-sdw: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
-    --drk-dp0: #222222;
-    --drk-dp1: #1e1e1e;
-    --drk-dp2: #121212;
-    --drk-bx-sdw: 0 -2px 10px rgba(0, 0, 0, 1);
+  --lgt-dp0: white;
+  --lgt-dp1: #f5f5f5;
+  --lgt-dp2: #eeeeee;
+  --lgt-bx-sdw: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+  --drk-dp0: #222222;
+  --drk-dp1: #1e1e1e;
+  --drk-dp2: #121212;
+  --drk-bx-sdw: 0 -2px 10px rgba(0, 0, 0, 1);
 }
-
-
-
-
 
 /* Body related settings
 ------------------------ */
 
 .body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
 }
 
 .body--lgt {
-    background-color: var(--lgt-dp0);
+  background-color: var(--lgt-dp0);
 }
 
-
-
-
+.body--drk {
+  background-color: var(--drk-dp0);
+}
 
 /* Calculator main container related settings 
 --------------------------------------------- */
 
 .main-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 80vh;
-    width: 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 80vh;
+  width: 25vw;
 }
 
 .main-container--lgt {
-    background-color: var(--lgt-dp2);
+  background-color: var(--lgt-dp2);
 }
 
-
-
-
+.main-container--drk {
+  background-color: var(--drk-dp2);
+}
 
 /* Main container display area related settings
 ----------------------------------------------- */
 
 .main-container__display-area {
-    height: 10%;
-    width: 90%;
-    padding: 5px;
+  height: 10%;
+  width: 90%;
+  padding: 5px;
 }
 
 .main-container__display-area--lgt {
-    background-color: var(--lgt-dp1);
+  background-color: var(--lgt-dp1);
 }
 
-
-
-
+.main-container__display-area--drk {
+  background-color: var(--drk-dp1);
+}
 
 /* Display area display related settings
 ---------------------------------------- */
 
 .display-area__display {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: right;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    font-size: 35px;
-    white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-size: 35px;
+  white-space: nowrap;
 }
 
 .display-area__display--lgt {
-    background-color: var(--lgt-dp0);
+  background-color: var(--lgt-dp0);
+  color: black;
 }
 
-
-
-
+.display-area__display--drk {
+  background-color: var(--drk-dp0);
+  color: white;
+}
 
 /* Main container input container related settings
 -------------------------------------------------- */
 
 .main-container__input-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-areas:
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
     "cln cln divi mult"
     "input7 input8 input9 subt"
     "input4 input5 input6 addi"
     "input1 input2 input3 clt"
-    "input0 input0 dcm clt"
-    ;
-    gap: 5px;
-    height: 80%;
-    width: 90%;
-    padding: 5px;
+    "input0 input0 dcm clt";
+  gap: 5px;
+  height: 80%;
+  width: 90%;
+  padding: 5px;
 }
 
-.main-container__input-container {
-    background-color: var(--lgt-dp1);
+.main-container__input-container--lgt {
+  background-color: var(--lgt-dp1);
 }
 
-
-
-
+.main-container__input-container--drk {
+  background-color: var(--drk-dp1);
+}
 
 /* Input container input related settings
 ----------------------------------------- */
 
 .input-container__input {
-    font-size: 28px;
+  font-size: 28px;
 }
 
 .input-container__input:active {
-    height: 95%;
-    width: 95%;
+  height: 95%;
+  width: 95%;
 }
 
+/* Input container operator inputs related settings 
+---------------------------------------------------*/
+
 .input-container__op-input {
-    background-color: dodgerblue;
-    color: white;
+  background-color: dodgerblue;
+  color: white;
 }
 
 .input-container__op-input:hover {
-    background-color: blue;
+  background-color: rgb(92, 92, 240);
 }
 
 .input-container__op-input--bg-clr-red {
-    background-color: red;
+  background-color: red;
 }
 
 .input-container__op-input--bg-clr-red:hover {
-    background-color: rgb(201, 7, 7);
+  background-color: rgb(201, 7, 7);
 }
 
+/* Input container number inputs related settings 
+-------------------------------------------------*/
+
 .input-container__num-input--lgt {
-    background-color: white;
-    color: black;
+  background-color: var(--lgt-dp0);
+  color: black;
 }
 
 .input-container__num-input--lgt:hover {
-    background-color: lightgrey;
+  background-color: lightgrey;
 }
 
+.input-container__num-input--drk {
+  background-color: var(--drk-dp0);
+  color: white;
+}
+
+.input-container__num-input--drk:hover {
+  background-color: rgb(26, 25, 25);
+}
+
+/* Input container inputs grid area settings
+--------------------------------------------*/
+
 .input-container__cln-input {
-    grid-area: cln;
+  grid-area: cln;
 }
 
 .input-container__divi-input {
-    grid-area: divi;
+  grid-area: divi;
 }
 
 .input-container__mult-input {
-    grid-area: mult;
+  grid-area: mult;
 }
 
 .input-container__7-input {
-    grid-area: input7;
+  grid-area: input7;
 }
 
 .input-container__8-input {
-    grid-area: input8;
+  grid-area: input8;
 }
 
 .input-container__9-input {
-    grid-area: input9;
+  grid-area: input9;
 }
 
 .input-container__subt-input {
-    grid-area: subt;
+  grid-area: subt;
 }
 
 .input-container__4-input {
-    grid-area: input4;
+  grid-area: input4;
 }
 
 .input-container__5-input {
-    grid-area: input5;
+  grid-area: input5;
 }
 
 .input-container__6-input {
-    grid-area: input6;
+  grid-area: input6;
 }
 
 .input-container__addi-input {
-    grid-area: addi;
+  grid-area: addi;
 }
 
 .input-container__1-input {
-    grid-area: input1;
+  grid-area: input1;
 }
 
 .input-container__2-input {
-    grid-area: input2;
+  grid-area: input2;
 }
 
 .input-container__3-input {
-    grid-area: input3;
+  grid-area: input3;
 }
 
 .input-container__clt-input {
-    grid-area: clt;
+  grid-area: clt;
 }
 
 .input-container__0-input {
-    grid-area: input0;
+  grid-area: input0;
 }
 
 .input-container__dcm-input {
-    grid-area: dcm;
+  grid-area: dcm;
 }
 
 /* Check box area check box label related settings
 -------------------------------------------------- */
 
 .check-box-area__check-box-label--lgt {
-    color: black;
+  color: black;
+}
+
+.check-box-area__check-box-label--drk {
+  color: white;
 }
